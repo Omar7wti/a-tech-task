@@ -1,0 +1,14 @@
+<div id="new_resource" class="new_resource">
+  <div class="container">
+    <div class="user_img">
+      <figure>
+        <img src="../../../assets/imgs/Image-100.png" alt="" />
+      </figure>
+      <span><img src="../../../assets/imgs/gallery.svg" alt="" /></span>
+    </div>
+    <form [formGroup]="newResource" (ngSubmit)="onSubmit()" action="">
+      <label for="userName">اسم الموارد</label>
+      <input type="text" name="userName" formControlName="userName" />
+    </form>
+  </div>
+</div>

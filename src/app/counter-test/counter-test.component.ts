@@ -14,13 +14,12 @@ import { Store } from '@ngrx/store';
 export class CounterTestComponent {
   count!: Observable<number>;
 
-  constructor(private store: Store<{ count: number }>) {
-    this.count! = store.select('count');
+  constructor(private store: Store<{ counter: number }>) {
+    this.count! = store.select('counter');
   }
-  ngOninit() {
-    this.store
-      .select('count')
-      .subscribe((count: any) => console.log(typeof count));
+  ngOnInit() {
+    console.log(this.store);
+    this.store.select('counter').subscribe((res: any) => console.log(res));
   }
   increment() {
     this.store.dispatch(increment());

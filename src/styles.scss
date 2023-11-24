@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color:  #DFE1E3;
+
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+figure img {
+  width: 100%;
+  object-fit: contain;
+}
