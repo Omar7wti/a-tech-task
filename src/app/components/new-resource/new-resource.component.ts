@@ -33,9 +33,6 @@ export class NewResourceComponent {
       this.resourceName = value;
     });
   }
-  // ngDoCheck() {
-  //   console.log(this.resourceName);
-  // }
 
   onSubmit(): void {
     console.log(this.newResource.value);

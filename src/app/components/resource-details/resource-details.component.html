@@ -1,0 +1,112 @@
+<div id="resource_details" class="resource_details">
+  <div class="container">
+    <form [formGroup]="resourceDetails" (ngSubmit)="onSubmit()" action="">
+      <div class="rowOne">
+        <label class="gray_label" for="days">المورد متاح إلي</label>
+        <div class="days_months_input">
+          <input
+            class="days"
+            type="number"
+            name="days"
+            formControlName="days"
+            min="1"
+          />
+          <select formControlName="months" class="months" name="month" id="">
+            <option value="">شهر</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+          </select>
+        </div>
+      </div>
+      <div class="rowTwo">
+        <div class="resource_time">
+          <label class="gray_label" for="">وقت المورد</label>
+          <div class="inputs">
+            <div class="input">
+              <input
+                type="radio"
+                name="resource_time"
+                formControlName="resource_time"
+                id="service_time_one"
+              />
+              <span
+                ><img src="../../../assets/imgs/box-time.svg" alt=""
+              /></span>
+              <label for="service_time_one">وقت الخدمة</label>
+            </div>
+            <div class="input">
+              <input
+                type="radio"
+                name="resource_time"
+                formControlName="resource_time"
+                id="service_time_two"
+              />
+              <span><img src="../../../assets/imgs/clock.svg" alt="" /></span>
+              <label for="service_time_two">الوقت الثابت</label>
+            </div>
+          </div>
+        </div>
+        <div class="time_counter">
+          <button>+</button>
+          <span>30 دقيقة</span>
+          <button>-</button>
+        </div>
+      </div>
+      <div class="rowThree">
+        <div class="multiple_reservation">
+          <div class="label">
+            <label class="gray_label" for="">الحجز المتعدد</label>
+            <span
+              ><img src="../../../assets/imgs/info-circle.svg" alt=""
+            /></span>
+          </div>
+          <div class="inputs">
+            <div class="input">
+              <input
+                type="radio"
+                name="reservation"
+                formControlName="reservation"
+                id="service_time"
+                value="one_person"
+              />
+              <span><img src="../../../assets/imgs/person.svg" alt="" /></span>
+              <label for="service_time">حجز واحد فقط</label>
+            </div>
+            <div class="input">
+              <input
+                type="radio"
+                name="reservation"
+                formControlName="reservation"
+                id=""
+                value="group"
+              />
+              <span><img src="../../../assets/imgs/Group.svg" alt="" /></span>
+              <label for="service_time">حجز اكثر من شخص لنفس الموعد</label>
+            </div>
+          </div>
+        </div>
+        <div class="date_counter">
+          <input
+            type="number"
+            name="date_counter"
+            formControlName="date_counter"
+            [contentEditable]="false"
+            min="2"
+            value="2"
+          />
+          <label for="date_counter">موعد</label>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

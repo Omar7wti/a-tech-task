@@ -5,6 +5,8 @@ import { StoreModule, Store } from '@ngrx/store';
 import { counterReducer } from '../app/Counter/counter.reducer';
 import { CounterTestComponent } from './counter-test/counter-test.component';
 import { NewResourceComponent } from './components/new-resource/new-resource.component';
+import { ResourceDetailsComponent } from './components/resource-details/resource-details.component';
+import { ResourcesTypeComponent } from './components/resources-type/resources-type.component';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -16,6 +18,8 @@ import { NewResourceComponent } from './components/new-resource/new-resource.com
     CounterTestComponent,
     StoreModule,
     NewResourceComponent,
+    ResourceDetailsComponent,
+    ResourcesTypeComponent,
   ],
 })
 export class AppComponent {

@@ -1,0 +1,42 @@
+.resources_type {
+  background-color: #FAF9F9;
+  border-radius: 15px;
+  padding:  1.5rem 0;
+}
+input[type="radio"] {
+  transform: scale(1.7);
+}
+.resources_type .container form{
+  display: flex;
+  align-items: center;
+  gap: 4.68rem;
+}
+.resources_type .container form .gray_label{
+  color: #92A1AD;
+  font-size: 0.875rem;
+  }
+
+.resources_type  .inputs {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.resources_type  .input {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.resources_type  label {
+font-size: 1rem;
+font-weight: 700;
+line-height: 1.5rem;
+padding-right: 0.7rem;
+color: #9E9EB2;
+}
+.resources_type  label  span{
+font-size: 1rem;
+font-weight: 400;
+line-height: 1.5rem;
+padding-right: 0.7rem;
+}

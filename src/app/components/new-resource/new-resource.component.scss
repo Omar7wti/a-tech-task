@@ -1,8 +1,7 @@
 .new_resource {
-  width: 45%;
   background-color: #FAF9F9;
   border-radius: 15px;
-  padding:  2.62rem 0;
+  padding:  2.1rem 0;
 
 }
 
@@ -44,7 +43,9 @@ flex-direction: column;
 justify-content: center;
 }
 .new_resource .container form label{
-color: #92A1AD;}
+color: #92A1AD;
+font-size: 0.875rem;
+}
 
 .new_resource .container form input[type="text"]{
   margin-top:1rem;
