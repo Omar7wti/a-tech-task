@@ -1,0 +1,15 @@
+<div class="container">
+  <ul>
+    <li *ngFor="let day of weekDays">
+      <label class="switch">
+        <input type="checkbox" [(ngModel)]="day.isToggleChecked" />
+        <span class="slider round"></span>
+      </label>
+      {{ day.name }}
+      <div class="time-fields" *ngIf="day.isToggleChecked">
+        <input type="text" placeholder="Start Time" />
+        <input type="text" placeholder="End Time" />
+      </div>
+    </li>
+  </ul>
+</div>
