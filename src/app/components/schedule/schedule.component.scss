@@ -69,6 +69,7 @@ input:checked + .slider:before {
       display: inline;
       input {
         margin: 0px 15px;
+        outline: none;
         padding: 5px;
         width: 374px;
         height: 53px;
