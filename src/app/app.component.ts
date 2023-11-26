@@ -5,7 +5,7 @@ import { StoreModule } from '@ngrx/store';
 import { NewResourceComponent } from './components/new-resource/new-resource.component';
 import { ResourceDetailsComponent } from './components/resource-details/resource-details.component';
 import { ResourcesTypeComponent } from './components/resources-type/resources-type.component';
-import { ScheduleComponent } from './schedule/schedule.component';
+import { ScheduleComponent } from './components//schedule/schedule.component';
 @Component({
   selector: 'app-root',
   standalone: true,
