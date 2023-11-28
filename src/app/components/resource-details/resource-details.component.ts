@@ -18,7 +18,7 @@ export class ResourceDetailsComponent {
   resource_time!: string;
   reservation!: string;
   date_counter: number = 30;
-
+  constructor(private fb: FormBuilder) {}
   incrementCounter() {
     this.date_counter += 30;
     this.resourceDetails.get('date_counter')?.setValue(this.date_counter);
@@ -33,8 +33,6 @@ export class ResourceDetailsComponent {
       console.warn('Invalid decrement. Value cannot be less than 0.');
     }
   }
-
-  constructor(private fb: FormBuilder) {}
 
   ngOnInit() {
     this.resourceDetails = this.fb.group({

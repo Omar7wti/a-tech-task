@@ -61,7 +61,38 @@ input:checked + .slider:before {
   margin: 2.1rem 0;
   padding: 2.1rem 0;
   background-color: #faf9f9;
-
+  .schedule-header {
+    padding: 5px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .text {
+      p {
+        color: #838587;
+        padding: 15px 0px;
+      }
+    }
+    .buttons {
+      width: 15%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      a {
+        text-decoration: none;
+        color: #838587;
+      }
+      button {
+        width: 130.109px;
+        color: white;
+        height: 43.37px;
+        border-radius: 8px;
+        border: none;
+        cursor: pointer;
+        background: var(--primary-default, #0771de);
+        box-shadow: 0px 8px 40px 0px rgba(112, 144, 176, 0.08);
+      }
+    }
+  }
   ul {
     list-style: none;
     padding: 5px 50px;
