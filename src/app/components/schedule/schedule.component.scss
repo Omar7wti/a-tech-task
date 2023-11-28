@@ -62,7 +62,7 @@ input:checked + .slider:before {
   padding: 2.1rem 0;
   background-color: #faf9f9;
   .schedule-header {
-    padding: 5px 50px;
+    padding: 5px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -95,7 +95,10 @@ input:checked + .slider:before {
   }
   ul {
     list-style: none;
+    display: grid;
+    grid-gap: 30px;
     padding: 5px 50px;
+    margin-top: 20px;
     .time-fields {
       display: inline;
       input {
@@ -104,15 +107,11 @@ input:checked + .slider:before {
         padding: 5px;
         width: 374px;
         height: 53px;
-        top: 807px;
-        left: 1264px;
         border-radius: 9px;
         border: 1px;
       }
     }
     li {
-      padding: 5px;
-      margin: 20px 0px;
     }
   }
 }
