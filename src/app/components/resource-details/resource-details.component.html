@@ -10,6 +10,7 @@
             name="days"
             formControlName="days"
             min="1"
+            max="31"
           />
           <select formControlName="months" class="months" name="month" id="">
             <option value="">شهر</option>
@@ -37,7 +38,8 @@
                 type="radio"
                 name="resource_time"
                 formControlName="resource_time"
-                id="service_time_one"
+                id="one"
+                value="one"
               />
               <span
                 ><img src="../../../assets/imgs/box-time.svg" alt=""
@@ -49,7 +51,8 @@
                 type="radio"
                 name="resource_time"
                 formControlName="resource_time"
-                id="service_time_two"
+                id="two"
+                value="tow"
               />
               <span><img src="../../../assets/imgs/clock.svg" alt="" /></span>
               <label for="service_time_two">الوقت الثابت</label>
@@ -57,9 +60,9 @@
           </div>
         </div>
         <div class="time_counter">
-          <button>+</button>
-          <span>30 دقيقة</span>
-          <button>-</button>
+          <button (click)="incrementCounter()">+</button>
+          <span>{{ date_counter }} دقيقة</span>
+          <button (click)="decrementCounter()">-</button>
         </div>
       </div>
       <div class="rowThree">

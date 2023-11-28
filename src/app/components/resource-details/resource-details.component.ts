@@ -2,23 +2,14 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import {
-  FormGroup,
-  FormBuilder,
-  Validators,
-  AbstractControl,
-  ValidationErrors,
-  ValidatorFn,
-  FormArray,
-  FormControl,
-} from '@angular/forms';
+import { FormGroup, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-resource-details',
   standalone: true,
   imports: [CommonModule, FormsModule, ReactiveFormsModule],
   templateUrl: './resource-details.component.html',
-  styleUrl: './resource-details.component.scss',
+  styleUrls: ['./resource-details.component.scss'],
 })
 export class ResourceDetailsComponent {
   resourceDetails!: FormGroup;
@@ -26,8 +17,25 @@ export class ResourceDetailsComponent {
   months!: number;
   resource_time!: string;
   reservation!: string;
-  date_counter!: number;
+  date_counter: number = 30;
+
+  incrementCounter() {
+    this.date_counter += 30;
+    this.resourceDetails.get('date_counter')?.setValue(this.date_counter);
+  }
+
+  decrementCounter() {
+    if (this.date_counter - 30 >= 0) {
+      this.date_counter -= 30;
+      this.resourceDetails.get('date_counter')?.setValue(this.date_counter);
+    } else {
+      // Optionally handle or notify the user about invalid decrement
+      console.warn('Invalid decrement. Value cannot be less than 0.');
+    }
+  }
+
   constructor(private fb: FormBuilder) {}
+
   ngOnInit() {
     this.resourceDetails = this.fb.group({
       days: [''],
@@ -57,6 +65,7 @@ export class ResourceDetailsComponent {
         this.date_counter = value;
       });
   }
+
   ngDoCheck() {
     console.log(this.resourceDetails.value);
     console.log(this.reservation);
