@@ -6,6 +6,7 @@ import { NewResourceComponent } from './components/new-resource/new-resource.com
 import { ResourceDetailsComponent } from './components/resource-details/resource-details.component';
 import { ResourcesTypeComponent } from './components/resources-type/resources-type.component';
 import { ScheduleComponent } from './components//schedule/schedule.component';
+import { NavComponent } from './components/nav/nav.component';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -19,6 +20,7 @@ import { ScheduleComponent } from './components//schedule/schedule.component';
     ResourceDetailsComponent,
     ResourcesTypeComponent,
     ScheduleComponent,
+    NavComponent,
   ],
 })
 export class AppComponent {

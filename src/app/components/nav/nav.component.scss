@@ -1,0 +1,102 @@
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin: 0px 0px 0px 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.nav-container {
+  display: flex;
+  padding: 100px 0px 30px 0px;
+  justify-content: space-between;
+  .box-back {
+    display: flex;
+    width: 220px;
+    align-items: center;
+    justify-content: space-between;
+    span {
+      cursor: pointer;
+    }
+    p {
+      font-weight: 700;
+      font-size: 24px;
+    }
+  }
+  .box-buttons {
+    width: 470px;
+    height: 57px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    button {
+      cursor: pointer;
+    }
+    .save {
+      width: 172.069px;
+      height: 56.82px;
+      border-radius: 9px;
+      background: #1c1c28;
+      color: white;
+    }
+    .delete {
+      width: 150.938px;
+      height: 56.82px;
+      border-radius: 9px;
+      color: #ff4b55;
+      border: 1px solid #ff4b55;
+      background: #fff6f6;
+      .trash {
+        padding: 0px 8px;
+      }
+    }
+  }
+}
